@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* GoVenture Design System */
+    --background: 40 33% 98%;
+    --foreground: 220 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
+
+    /* Ocean Teal - Primary */
+    --primary: 185 65% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Sandy Cream - Secondary */
+    --secondary: 40 40% 94%;
+    --secondary-foreground: 220 30% 20%;
+
+    /* Muted Sand */
+    --muted: 40 25% 92%;
+    --muted-foreground: 220 15% 45%;
+
+    /* Sunset Coral - Accent */
+    --accent: 15 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 185 65% 35%;
+
+    --radius: 0.75rem;
+
+    /* Custom GoVenture tokens */
+    --ocean: 185 65% 35%;
+    --ocean-light: 185 60% 45%;
+    --ocean-dark: 185 70% 25%;
+    --coral: 15 85% 60%;
+    --coral-light: 15 90% 70%;
+    --sand: 40 40% 94%;
+    --sand-dark: 40 30% 85%;
+    --navy: 220 40% 20%;
+    --sky: 200 80% 92%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(185 65% 35%) 0%, hsl(200 70% 45%) 50%, hsl(185 60% 40%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(15 85% 60%) 0%, hsl(35 90% 55%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 33% 98%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 8px 24px -8px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 16px 48px -12px rgba(0, 0, 0, 0.15);
+    --shadow-glow: 0 8px 32px -8px hsl(185 65% 35% / 0.25);
+    --shadow-coral: 0 8px 32px -8px hsl(15 85% 60% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 185 65% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 40% 94%;
+    --sidebar-accent-foreground: 220 30% 20%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 185 65% 35%;
+  }
+
+  .dark {
+    --background: 220 30% 10%;
+    --foreground: 40 30% 95%;
+
+    --card: 220 25% 14%;
+    --card-foreground: 40 30% 95%;
+
+    --popover: 220 25% 14%;
+    --popover-foreground: 40 30% 95%;
+
+    --primary: 185 55% 50%;
+    --primary-foreground: 220 30% 10%;
+
+    --secondary: 220 20% 20%;
+    --secondary-foreground: 40 30% 95%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 40 20% 65%;
+
+    --accent: 15 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 22%;
+    --input: 220 20% 22%;
+    --ring: 185 55% 50%;
+
+    --ocean: 185 55% 50%;
+    --ocean-light: 185 50% 60%;
+    --ocean-dark: 185 60% 40%;
+    --coral: 15 80% 55%;
+    --coral-light: 15 85% 65%;
+    --sand: 220 20% 18%;
+    --sand-dark: 220 25% 14%;
+    --navy: 40 30% 95%;
+    --sky: 200 50% 20%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(185 55% 40%) 0%, hsl(200 60% 35%) 50%, hsl(185 50% 45%) 100%);
+
+    --sidebar-background: 220 30% 10%;
+    --sidebar-foreground: 40 30% 95%;
+    --sidebar-primary: 185 55% 50%;
+    --sidebar-primary-foreground: 220 30% 10%;
+    --sidebar-accent: 220 20% 20%;
+    --sidebar-accent-foreground: 40 30% 95%;
+    --sidebar-border: 220 20% 22%;
+    --sidebar-ring: 185 55% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .sunset-gradient {
+    background: var(--gradient-sunset);
+  }
+
+  .text-gradient-ocean {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-sunset {
+    background: var(--gradient-sunset);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-coral {
+    box-shadow: var(--shadow-coral);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 4s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse-soft {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.4s ease-out forwards;
+  }
+}

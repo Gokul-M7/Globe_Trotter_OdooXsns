@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO: Set the document title to the name of your application -->
+  <title>GoVenture</title>
+  <meta name="description" content="Your Ultimate Travel Companion" />
+  <meta name="author" content="GoVenture" />
+
+  <meta property="og:title" content="GoVenture" />
+  <meta property="og:description" content="Your Ultimate Travel Companion" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/goventure-loader-logo.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@GoVenture" />
+  <meta name="twitter:image" content="/goventure-loader-logo.png" />
+  <link rel="icon" type="image/png" href="/goventure-loader-logo.png" />
+</head>
+
+<body>
+  <div id="root">
+    <div
+      style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; width: 100vw; background-color: #f8fafc;">
+      <img src="/goventure-loader-logo.png" alt="GoVenture Loading"
+        style="width: 120px; height: 120px; animation: pulse 2s infinite;" />
+      <style>
+        @keyframes pulse {
+          0% {
+            transform: scale(1);
+            opacity: 1;
+          }
+
+          50% {
+            transform: scale(1.05);
+            opacity: 0.8;
+          }
+
+          100% {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+      </style>
+    </div>
+  </div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
