@@ -1,12 +1,15 @@
 
-# Problem Statement
+# Problem Statement - Odoo X sns Hackathon 2026
 Travel planning is often fragmented, stressful, and disconnected. Travelers struggle to organize itineraries, manage budgets across different currencies, and find authentic community recommendations in one place. Existing solutions lack an integrated, intelligent ecosystem that combines planning, budgeting, and social sharing.
 
 # Project Name
-**GoVenture** (Globe_Trotter_OdooXsns)
+**GoVenture** 
 
 # Team Name
 **Falcons**
+
+# Team Members 
+**GOKUL M ,ESWAR V ,PRAEMJITH P R , UDHAYA KUMAR K G**
 
 # Technical Stacks
 - **Frontend**: React, TypeScript, Vite
@@ -70,13 +73,6 @@ GoVenture is an all-in-one travel companion application designed to simplify the
 3.  **Explore Community**: Visit the Community tab to see posts from other travelers and share your own.
 4.  **Manage Profile**: Update your bio, travel style, and notification settings in the Profile/Settings section.
 
-# Screenshots
-
-### Home Page
-*(Add screenshot of Hero/Landing page here)*
-
-### Dashboard / Trip Planner
-*(Add screenshot of the Dashboard here)*
-
-### Community Feed
-*(Add screenshot of Community page here)*
+contact: 
+Gokulvm2005@gmail.com 
+23ec026@kpriet.ac.in
